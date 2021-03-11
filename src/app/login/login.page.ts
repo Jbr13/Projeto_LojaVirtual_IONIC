@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
     try {
       await this.authService.login(this.userLogin);
       this.util.setMenuState(true);
-      this.navCtrl.navigateRoot('/home-products', { animationDirection: 'forward' });
+      this.navCtrl.navigateRoot('/home', { animationDirection: 'forward' });
     } catch (error) {
       console.log(error);
       this.presentToast(error.message);
